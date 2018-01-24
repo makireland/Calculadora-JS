@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Calculadora</title>
+  <script src="calculadora.js"></script>
+</head>
+
+<body>
+  <form>
+    <div>
+      <label for="numero1">Numero 1:</label>
+      <input type="text" id="numero1">
+    </div>
+    <div>
+      <label for="numero2">Numero 2:</label>
+      <input type="text" id="numero2">
+    </div>
+    <div>
+      <label for="resultado">Resultado:</label>
+      <input type="text" id="resultado">
+    </div>
+    <div>
+      <label for="reapetPassword">Reapet Password:</label>
+      <input type="password" id="reapetPassword">
+    </div>
+    <button onclick="validForm();" type="button">Validate</button>
+    
+  </form>
+  <script>
+    var validForm = function () {
+      var validName = new Validation("name");
+      validName.min(3);
+      validName.empty();
+      validName.max(30);
+
+      var validSurname = new Validation("surname");
+      validSurname.min(5);
+      validSurname.empty();
+      validSurname.max(30);
+
+      var validPassword = new Validation("password");
+      validPassword.empty();
+
+      var validReapetPassword = new Validation("reapetPassword");
+      validReapetPassword.empty();
+      validReapetPassword.isEqual("password");
+    }
+  </script>
+</body>
+
+</html>
