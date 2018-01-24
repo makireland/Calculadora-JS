@@ -28,11 +28,10 @@
     
   </form>
   <script>
-    var validForm = function () {
-      var validName = new Validation("name");
-      validName.min(3);
-      validName.empty();
-      validName.max(30);
+    var calculadora = function () {
+      var add = new Validation("numero1");
+      add.add();
+     
 
       var validSurname = new Validation("surname");
       validSurname.min(5);
