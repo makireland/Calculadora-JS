@@ -21,19 +21,19 @@
       <input type="text" id="resultado">
     </div>
    
-    <button onclick="" type="button">Adicao</button>
-    <button onclick="" type="button">Subtracao</button>
-    <button onclick="" type="button">Multiplicacao</button>
-    <button onclick="" type="button">Divisao</button>
+    <button onclick="calculadoraForm();" type="button">Adicao</button>
+    <button onclick="calculadoraForm();" type="button">Subtracao</button>
+    <button onclick="calculadoraForm();" type="button">Multiplicacao</button>
+    <button onclick="calculadoraForm();" type="button">Divisao</button>
     
   </form>
   <script>
-    var calculadora = function () {
-      var add = new Validation("numero1");
-      add.add();
+    var calculadoraForm = function () {
+      var calculadoraAdd = new Validation("numero1","numero2","resultado");
+      calculadoraAdd.add();
      
 
-      var validSurname = new Validation("surname");
+      var calculadoraSubtraction = new Validation("surname");
       validSurname.min(5);
       validSurname.empty();
       validSurname.max(30);
